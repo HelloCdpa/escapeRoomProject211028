@@ -1,0 +1,12 @@
+package escapeRoom;
+
+public class zx {
+
+	public static void main(String[] args) {
+		
+		int ParticipantKg=5, ParticipantCm=90;
+		
+		
+		double LoanBody = (1.1 * ParticipantKg) - (128 * ((Math.pow(ParticipantKg,2)/(Math.pow(ParticipantCm,2)))));
+	}
+}

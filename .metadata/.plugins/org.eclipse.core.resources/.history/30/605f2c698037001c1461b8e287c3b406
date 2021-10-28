@@ -1,0 +1,75 @@
+package escapeRoom;
+
+import java.util.*;
+
+public class RoomService {
+	
+
+
+	/*
+	 * 메서드 이름 : memberJoin 회원가입
+	 * 매개변수 : List<RoomDTO> memberList
+	 * 리턴 : memberList
+	 */
+	List<RoomDTO> memberJoin (List<RoomDTO> memberList){
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("아이디 : ");
+		String id = scan.next();
+		System.out.println("비밀번호 : ");
+		String password = scan.next();
+		
+		RoomDTO r = new RoomDTO();
+		
+		return memberList;
+	}
+	
+	
+	
+	
+	
+	/*
+	 * 메서드 이름 : memberView 회원정보조회
+	 * 매개변수 : List<RoomDTO> memberList
+	 * 리턴 : memberList
+	 */
+	
+	
+	
+	
+	
+	
+	/*
+	 * 메서드 이름 : LoginCheck	로그인체크
+	 * 매개변수 : List<RoomDTO> memberList
+	 * 리턴 : int 
+	 */
+	
+	
+	
+	
+	
+	
+	/*
+	 * 메서드 이름 : escapeGame	로그인 & 게임
+	 * 매개변수 : List<RoomDTO> memberList, int
+	 * 리턴 : memberList
+	 */
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
