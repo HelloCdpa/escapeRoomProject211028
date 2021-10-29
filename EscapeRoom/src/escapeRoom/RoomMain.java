@@ -11,12 +11,12 @@ public class RoomMain {
 		Scanner scan = new Scanner(System.in);
 		List<RoomDTO> memberList = new ArrayList<>();
 		RoomService r = new RoomService();
-		GameService g = new GameService();
 		
+		System.out.println("엔터를 누르세요.");
 		boolean run = true;
 		while (run) {
 			a = scan.nextLine();
-			System.out.println("----------------------------🔒🔑🔒🔑-------------------------------------------");
+			System.out.println("\n----------------------------🔒🔑🔒🔑-------------------------------------------");
 			System.out.println("1.회원가입💋 | 2.회원정보조회 🔎 3.게임실행 🎮 | 4.명예회원의 전당 🏆 | 5.상점 💎 | 6.종료 ");
 			System.out.println("----------------------------🔒🔑🔒🔑-------------------------------------------");
 			System.out.print("선택> ");
@@ -31,11 +31,12 @@ public class RoomMain {
 				r.memberView(memberList);
 
 			} else if (input == 3) {
-				memberList = g.escapeGame(memberList);
+				memberList = r.escapeGame(memberList);
 
 			} else if (input == 4) {
 				r.honoraryMember(memberList);
 
+				
 			} else if (input == 5) {
 				memberList = r.store(memberList);
 				
@@ -52,7 +53,6 @@ public class RoomMain {
 			
 			
 		}
-
 	}	
 		
 	}

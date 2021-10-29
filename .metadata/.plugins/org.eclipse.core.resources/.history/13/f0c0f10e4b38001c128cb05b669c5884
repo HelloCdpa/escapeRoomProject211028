@@ -1,0 +1,12 @@
+package escapeRoom;
+
+import java.util.*;
+
+public interface RoomInterface {
+	
+	
+	
+	
+	
+
+}

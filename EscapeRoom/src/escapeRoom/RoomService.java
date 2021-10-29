@@ -1,13 +1,13 @@
 package escapeRoom;
 
-import java.util.*;
+import java.util.*; 
+import java.io.*;
 
-public class RoomService {
+public class RoomService implements RoomInterface {
 
-	/*
-	 * 메서드 이름 : memberJoin 회원가입 매개변수 : List<RoomDTO> memberList 리턴 : memberList
-	 */
-	List<RoomDTO> memberJoin(List<RoomDTO> memberList) {
+	@Override
+	public List<RoomDTO> memberJoin(List<RoomDTO> memberList) {
+
 		Scanner scan = new Scanner(System.in);
 
 		System.out.print("아이디 : ");
@@ -21,24 +21,21 @@ public class RoomService {
 		System.out.println(id + "님 가입을 축하드립니다! 가입기념으로 1000원 지급됐습니다.");
 
 		return memberList;
+
 	}
 
-	/*
-	 * 메서드 이름 : memberView 회원정보조회 매개변수 : List<RoomDTO> memberList 리턴 : void
-	 */
-
-	void memberView(List<RoomDTO> memberList) {
+	@Override
+	public void memberView(List<RoomDTO> memberList) {
 
 		for (RoomDTO r : memberList) {
 			System.out.println(r.toString());
 		}
+
 	}
 
-	/*
-	 * 메서드 이름 : LoginCheck 로그인체크 매개변수 : List<RoomDTO> memberList 리턴 : int
-	 */
+	@Override
+	public int LoginCheck(List<RoomDTO> memberList) {
 
-	int LoginCheck(List<RoomDTO> memberList) {
 		Scanner scan = new Scanner(System.in);
 
 		int loginNum = -1;
@@ -56,16 +53,17 @@ public class RoomService {
 			}
 		}
 		return loginNum;
+
 	}
 
-	List<RoomDTO> store(List<RoomDTO> memberList) {
-
+	@Override
+	public List<RoomDTO> store(List<RoomDTO> memberList) {
 		int num = LoginCheck(memberList);
 		if (num >= 0) {
 			RoomDTO m = memberList.get(num);
 			System.out.println("상점에서는 당신의 랭크를 살 수 있습니다. 물건을 고르고 번호를 입력하세요.");
 			System.out
-					.println("1. 🛕💰부자회원🛕💰(90만원) 2. 거지회원🥺(10원) 3. 👥빚쟁이 회원👥 (100만원) 4. 🐛벌레회원🐛(0원에 모십니다.) 5.종료");
+					.println("1. 🛕💰부자회원🛕💰(90만원) 2. 거지회원🥺(10원) 3. 👥빚쟁이 회원👥 (빚100만원) 4. 🐛벌레회원🐛(0원에 모십니다.) 5.종료");
 			Scanner scan = new Scanner(System.in);
 			int input = scan.nextInt();
 			switch (input) {
@@ -119,19 +117,50 @@ public class RoomService {
 		}
 
 		return memberList;
+
 	}
 
-	/*
-	 * 메서드 이름 : honoraryMember 명예의 전당 매개변수 : List<RoomDTO> memberList 리턴 :
-	 * memberList
-	 */
-	void honoraryMember(List<RoomDTO> memberList) {
-		RoomDTO m = null;
+	@Override
+	public void honoraryMember(List<RoomDTO> memberList) {
+		
 		for (int i = 0; i < memberList.size(); i++) {
-			m = memberList.get(i);
-			if (m.getMemberRank().equals("🥰🤸‍♀️✨🎖♥명예회원🥰🤸‍♀️✨🎖♥")) {
-				System.out.println("🥰🤸‍♀️✨🎖♥위대하신 " + m.getId() + "님!🥰🤸‍♀️✨🎖♥");
+			if (memberList.get(i).getMemberRank().equals("🥰🤸‍♀️✨🎖♥명예회원🥰🤸‍♀️✨🎖♥")) {
+				System.out.println("최근 명예를 얻은 회원 : ");
+				System.out.println("🥰🤸‍♀️✨🎖♥위대하신 " + memberList.get(i).getId() + "님!🥰🤸‍♀️✨🎖♥");
 			}
 		}
+		
+		
+		System.out.println("역대 명예의 전당 회원");
+		 try{
+		        //파일 객체 생성
+		        File file = new File("D:\\development_Phl\\source\\escapeRoom\\EscapeRoom.text");
+		         //입력 스트림 생성
+		         FileReader file_reader = new FileReader(file);
+		         int cur = 0;
+		         while((cur = file_reader.read()) != -1){
+		            System.out.print((char)cur);
+		         }
+		         file_reader.close();
+		        }catch (FileNotFoundException e) {
+		            e.getStackTrace();
+		        }catch(IOException e){
+		            e.getStackTrace();
+		        }
+		 
 	}
+
+	@Override
+	public List<RoomDTO> escapeGame(List<RoomDTO> memberList) {
+		GameService g = new GameService();
+		g.login(memberList);
+		g.stage1(memberList);
+		g.stage2(memberList);
+		g.stage3(memberList);
+		g.stage4(memberList);
+			
+		return memberList;
+	}
+		
+
 }

@@ -1,0 +1,77 @@
+package escapeRoom;
+
+import java.util.*;
+
+public class RoomService implements RoomInterface {
+
+	@Override
+	public List<RoomDTO> memberJoin(List<RoomDTO> memberList) {
+		
+		Scanner scan = new Scanner(System.in);
+
+		System.out.print("아이디 : ");
+		String id = scan.next();
+		System.out.print("비밀번호 : ");
+		String password = scan.next();
+		int memberNum = memberList.size() + 1;
+
+		RoomDTO r = new RoomDTO(id, password, "😀그냥회원😀", memberNum, 1000);
+		memberList.add(r);
+		System.out.println(id + "님 가입을 축하드립니다! 가입기념으로 1000원 지급됐습니다.");
+
+		return memberList;
+		
+		
+	}
+
+	@Override
+	public void memberView(List<RoomDTO> memberList) {
+
+		
+		
+		
+		
+	}
+
+	@Override
+	public int LoginCheck(List<RoomDTO> memberList) {
+
+		
+		
+		
+		
+	}
+
+	@Override
+	public List<RoomDTO> store(List<RoomDTO> memberList) {
+
+		
+		
+		
+		
+	}
+
+	@Override
+	public void honoraryMember(List<RoomDTO> memberList) {
+
+		
+		
+		
+		
+	}
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

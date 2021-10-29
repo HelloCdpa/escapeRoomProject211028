@@ -63,6 +63,11 @@ public class RoomDTO {
 		return "RoomDTO [Id=" + id + ", password=" + password + ", memberRank=" + memberRank + ", memberNum="
 				+ memberNum + ", money=" + money + "]";
 	}
+
+	public byte[] getBytes() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 	

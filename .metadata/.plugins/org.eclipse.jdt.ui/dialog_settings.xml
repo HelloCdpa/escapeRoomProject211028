@@ -3,6 +3,10 @@
 	<item key="org.eclipse.jdt.ui.last.selected.jre.kind2" value="2"/>
 	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-16"/>
 	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo" value="false"/>
+	<item key="Annotations" value="true"/>
+	<item key="Replace" value="true"/>
+	<item key="Comments" value="true"/>
+	<item key="InstanceOf" value="false"/>
 	<section name="JavaElementSearchActions">
 	</section>
 	<section name="OptionalMessageDialog.hide.">
@@ -92,7 +96,14 @@
 		<item key="updateTextualMatches" value="false"/>
 		<item key="updateQualifiedNames" value="false"/>
 		<item key="patterns" value="*"/>
+		<item key="renameSubpackages" value="false"/>
 	</section>
 	<section name="RenameInformationPopup">
+	</section>
+	<section name="NewRecordWizardPage">
+		<item key="create_unimplemented" value="true"/>
+	</section>
+	<section name="NewPackageWizardPage">
+		<item key="create_package_info_java" value="false"/>
 	</section>
 </section>

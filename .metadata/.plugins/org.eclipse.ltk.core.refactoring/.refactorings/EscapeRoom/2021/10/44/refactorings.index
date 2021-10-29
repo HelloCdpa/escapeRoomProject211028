@@ -1,3 +1,14 @@
 1635325996008	Delete element
 1635336026907	Rename type 'Game'
 1635400645707	Delete element
+1635465556614	Delete element
+1635465634817	Extract interface 'RoomInterface'
+1635481218652	Copy compilation unit
+1635483786208	Delete element
+1635483860907	Rename package 'escapeRoom2'
+1635483868550	Move compilation unit
+1635483877624	Move compilation unit
+1635483891907	Rename type 'GameService2'
+1635483899800	Rename type 'RoomMain2'
+1635484961931	Rename type 'GameService'
+1635484967971	Rename type 'RoomMain'

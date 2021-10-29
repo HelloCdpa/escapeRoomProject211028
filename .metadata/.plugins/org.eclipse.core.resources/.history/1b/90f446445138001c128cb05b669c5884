@@ -1,0 +1,78 @@
+package escapeRoom;
+
+import java.util.*;
+
+public class GameService2 {
+
+		List<RoomDTO> stage1 (List<RoomDTO> memberList) {
+		Scanner scan = new Scanner(System.in);
+		RoomService r = new RoomService();
+		
+		boolean run = true;
+		RoomDTO m = null;
+		int num = r.LoginCheck(memberList);
+
+		if (num >= 0) {
+			m = memberList.get(num);
+			System.out.println("로그인 성공!");
+			System.out.println("게임 시작 시 참가비 1000원이 차감됩니다.");
+			System.out.println("");
+			m.setMoney(m.getMoney() - 1000);
+
+			
+		System.out.println("😱");
+		System.out.println("어느날 눈을 떠 보니 " + m.getId() + "님 은 지금 문이 두개인 방에 갇혀있습니다.🔒");
+		System.out.println("Q. 왼쪽문에는 지석이의 방 오른쪽문에는 경진이의 방이라고 쓰여진 종이가 붙여져있습니다. 어디로 갈까요?");
+		System.out.println(" 1. 지석이 방| 2. 경진이 방");
+		System.out.print("선택 : ");
+		int num1 = scan.nextInt();
+
+		if (num1 == 1) {
+			
+				System.out.println("");
+				System.out.println("☆★☆★☆★☆★☆🎉🎉🎉🎉★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★");
+				System.out.println("지석이의 방에 성공적으로 침입했습니다!🙌만세!");
+				System.out.println("☆★☆★☆★☆★☆🎉🎉🎉🎉★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★");
+				System.out.println("철컥! 🔒 들어가자마자 들어왔던 문이 잠겼습니다.🙉");
+				System.out.println("");
+				System.out.println("이 방에는 하나의 숫자 자물쇠로 잠긴 문이 있고\r\n"
+						+ "주위에는 쪽지와 📃 케이크🍰가 올려져 있는 책상, 열쇠로 여는 잠겨진 서랍🗄이 있습니다.\r\n"
+						+ "당신은 책상 앞으로 가서 쪽지를 먼저 펼쳐보았습니다.");
+				System.out.println("");
+				while (run) {
+					boolean run3 = true;
+				System.out.println("Q.쪽지에는 <오지석! 내가 만든 케이크 맛있게 먹어 - 너의 깐부가> 라고 적혀있습니다.\r\n" + "당신은 ?");
+				System.out.println("1. 케이크를 먹는다. 2. 접시를 뒤집어 케이크를 납작하게 누른다.");
+				System.out.print(">선택 : ");
+				int num2 = scan.nextInt();
+
+		
+		
+		
+		
+		
+				}
+		}
+		return memberList;
+				
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+}
