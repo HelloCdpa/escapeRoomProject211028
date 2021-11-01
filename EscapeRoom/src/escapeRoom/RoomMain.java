@@ -7,7 +7,7 @@ public class RoomMain {
 	public static void main(String[] args) {
 		
 		int input;
-		String a;
+		
 		Scanner scan = new Scanner(System.in);
 		List<RoomDTO> memberList = new ArrayList<>();
 		RoomService r = new RoomService();
@@ -15,7 +15,7 @@ public class RoomMain {
 		System.out.println("엔터를 누르세요.");
 		boolean run = true;
 		while (run) {
-			a = scan.nextLine();
+			scan.nextLine();
 			System.out.println("\n----------------------------🔒🔑🔒🔑-------------------------------------------");
 			System.out.println("1.회원가입💋 | 2.회원정보조회 🔎 3.게임실행 🎮 | 4.명예회원의 전당 🏆 | 5.상점 💎 | 6.종료 ");
 			System.out.println("----------------------------🔒🔑🔒🔑-------------------------------------------");
@@ -52,6 +52,8 @@ public class RoomMain {
 			System.out.println("숫자를 입력하세요.");
 			
 			
+		} catch (IndexOutOfBoundsException e) {
+			System.out.println("회원가입 완료 후 게임시작을 해야 합니다.");
 		}
 	}	
 		

@@ -1,0 +1,22 @@
+package escapeRoom;
+
+import java.util.List;
+
+public interface GameInterface {
+
+	List<RoomDTO> login(List<RoomDTO> memberList);
+	List<RoomDTO> stage1(List<RoomDTO> memberList);
+	List<RoomDTO> stage2(List<RoomDTO> memberList);
+	List<RoomDTO> bonusStage(List<RoomDTO> memberList);
+	List<RoomDTO> stage3(List<RoomDTO> memberList);
+	List<RoomDTO> stage4(List<RoomDTO> memberList);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

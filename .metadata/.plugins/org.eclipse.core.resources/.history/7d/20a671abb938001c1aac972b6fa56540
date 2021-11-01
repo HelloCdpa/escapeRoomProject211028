@@ -1,0 +1,16 @@
+package escapeRoom;
+
+public class test {
+
+	public static void main(String[] args) {
+		
+		String [] weapon = {"은지의 마카롱","광욱이의 맥 노트북","윤성의 메가커피"};
+		int hp = 100;
+		
+		for (int i=0; i<weapon.length; i++ ) {
+		System.out.println(weapon[i]);
+		}
+
+	}
+
+}
