@@ -9,7 +9,6 @@ public interface RoomInterface {
 	int LoginCheck(List<RoomDTO> memberList);
 	List<RoomDTO> store(List<RoomDTO> memberList);
 	void honoraryMember(List<RoomDTO> memberList);
-	
 	List<RoomDTO> escapeGame(List<RoomDTO> memberList);
 	
 }

@@ -10,6 +10,7 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\Park\Desktop\배운 것\방탈최종.zip"/>
 			<item value="C:\Users\Park\Desktop\배운 것\방탈 1.zip"/>
 		</list>
 	</section>
